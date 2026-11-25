@@ -1,7 +1,7 @@
 """Render short human-readable labels for warehouse bins."""
 
 
-def format_pick_label(order_id, aisle):
+def render_pick_label(order_id, aisle):
     return f"{aisle.upper()} / {order_id.upper()}"
 
 

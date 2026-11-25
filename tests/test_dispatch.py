@@ -1,6 +1,6 @@
 import unittest
 
-from parcel_dispatch.labels import format_pick_label
+from parcel_dispatch.labels import render_pick_label
 from parcel_dispatch.manifests import manifest_filename, manifest_summary
 from parcel_dispatch.workflow import schedule_order
 
@@ -16,4 +16,4 @@ class DispatchTests(unittest.TestCase):
         self.assertEqual(reservation["state"], "reserved")
 
     def test_label_normalizes_the_printed_order(self):
-        self.assertEqual(format_pick_label("o-14", "r3"), "R3 / O-14")
+        self.assertEqual(render_pick_label("o-14", "r3"), "R3 / O-14")
