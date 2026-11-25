@@ -13,3 +13,7 @@ def manifest_summary(route_id, parcel_ids):
 
 def manifest_filename(route_id):
     return f"manifest-{route_id.lower().replace(' ', '-')}.json"
+
+
+def carrier_manifest(route_id, parcel_ids):
+    return json.dumps(manifest_summary(route_id, parcel_ids), sort_keys=True)
