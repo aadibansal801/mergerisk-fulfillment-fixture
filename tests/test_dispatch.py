@@ -14,6 +14,7 @@ class DispatchTests(unittest.TestCase):
         reservation = schedule_order({"id": "O-14", "destination": "BLR", "carrier": "parcelco"})
         self.assertEqual(reservation["destination"], "BLR")
         self.assertEqual(reservation["state"], "reserved")
+        self.assertEqual(reservation["carrier"], "parcelco")
 
     def test_label_normalizes_the_printed_order(self):
         self.assertEqual(format_pick_label("o-14", "r3"), "R3 / O-14")
