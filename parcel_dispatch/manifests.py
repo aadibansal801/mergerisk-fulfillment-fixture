@@ -1,8 +1,5 @@
 """Prepare outbound parcel manifests for warehouse staff."""
 
-import json
-
-
 def manifest_summary(route_id, parcel_ids):
     return {
         "route_id": route_id,
